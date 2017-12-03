@@ -6,4 +6,8 @@ module CardView
   def self.help
     puts "you must include a filename"
   end
+
+  def self.prompt_user
+    
+  end
 end

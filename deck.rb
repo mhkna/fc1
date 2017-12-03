@@ -6,7 +6,9 @@ class Deck
   end
 
   def get_current_card
-    cards.shuffle.pop
+    current = cards.shuffle.pop
+    cards.delete(current)
+    current
   end
 
   def is_gone?
