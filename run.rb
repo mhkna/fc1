@@ -1,9 +1,13 @@
-require_relative 'parse'
+require_relative 'parse.rb'
+require_relative 'controller.rb'
+require_relative 'deck.rb'
+require_relative 'card_view.rb'
+require_relative 'card.rb'
 
 if ARGV.any?
-  deck = ARGV[0]
+  file = ARGV[0]
+  controller = Controller.new
+  controller.run(file)
 else
-  puts "specify a file"
+  CardView.help
 end
-
-p deck
