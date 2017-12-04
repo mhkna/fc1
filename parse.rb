@@ -15,5 +15,3 @@ module Parse
     cards
   end
 end
-
-# p Parser.get('nighthawk_flashcard_data.txt')

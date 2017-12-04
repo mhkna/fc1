@@ -1,8 +1,8 @@
 class Deck
   attr_reader :cards
 
-  def initialize(args = {})
-    @cards = args[:cards]
+  def initialize(file)
+    @cards = Parse.get(file)
   end
 
   def get_current_card

@@ -8,6 +8,6 @@ module CardView
   end
 
   def self.prompt_user
-    
+    $stdin.gets.chomp.downcase
   end
 end

@@ -1,12 +1,20 @@
 class Controller
   def run(file)
-    card_array = Parse.get(file)
-    deck = Deck.new({cards: card_array})
+    deck = Deck.new(file)
+    correct = 0
     until deck.is_gone? do
-      CardView.show_question(deck.get_current_card)
-      #promp user
-      #if response == correct -> count += 1
+      current = deck.get_current_card
+      CardView.show_question(current)
+      answer = CardView.prompt_user
+      if answer == "quit"
+        abort
+      elsif answer == current.answer.downcase
+        puts "correct"
+        correct += 1
+      else
+        puts "wrong"
+      end
     end
-    # View.correctness count/5
+    puts "#{correct} out of 5 correct"
   end
 end
