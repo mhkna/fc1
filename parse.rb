@@ -1,6 +1,3 @@
-
-# files = ['./nighthawk_flashcard_data.txt', './raccoon_flashcard_data.txt', './otter_flashcard_data.txt']
-
 module Parse
   def self.get(filename)
     cards = []

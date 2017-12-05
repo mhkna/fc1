@@ -5,4 +5,8 @@ class Card
     @question = args[:question]
     @answer = args[:answer]
   end
+
+  def correct?(guess)
+    guess.downcase == answer.downcase
+  end
 end

@@ -5,16 +5,19 @@ class Controller
     until deck.is_gone? do
       current = deck.get_current_card
       CardView.show_question(current)
-      answer = CardView.prompt_user
-      if answer == "quit"
+      response = CardView.prompt_user
+      if response == "quit"
         abort
-      elsif answer == current.answer.downcase
-        puts "correct"
+      elsif response == current.answer.downcase
+        puts "correct!"
+        puts
         correct += 1
       else
-        puts "wrong"
+        puts "wrong!"
+        puts
       end
     end
-    puts "#{correct} out of 5 correct"
+    puts "You correctly answered #{correct} of 5 cards"
+    puts
   end
 end
