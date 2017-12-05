@@ -1,7 +1,7 @@
 require_relative 'parse.rb'
 require_relative 'controller.rb'
 require_relative 'deck.rb'
-require_relative 'card_view.rb'
+require_relative 'view.rb'
 require_relative 'card.rb'
 
 if ARGV.any?
